@@ -1,9 +1,0 @@
-.bundle
-.cache
-.DS_Store
-.sass-cache
-build/
-.env
-.gitignore
-netlify.toml
-netlifyctl-debug.log
