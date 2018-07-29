@@ -1,4 +1,3 @@
-activate :aria_current
 activate :autoprefixer
 activate :inline_svg
 
@@ -10,6 +9,8 @@ set :js_dir, "assets/javascripts"
 page "/*.json", layout: false
 page "/*.txt", layout: false
 page "/*.xml", layout: false
+
+page "source/*", :layout => :content_layout
 
 configure :development do
   activate :livereload do |reload|
