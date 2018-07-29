@@ -2,6 +2,5 @@
   ID = "3f0b99d6-bfec-4c65-b745-938ce03e73e1"
 
 [Build]
-  Base = "personal-site"
-  Publish = "/build"
-  Functions = "bundle exec middleman build"
+  Publish = ""
+  Functions = ""
