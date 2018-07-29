@@ -1,6 +1,6 @@
 [Settings]
-  ID = "3f0b99d6-bfec-4c65-b745-938ce03e73e1"
+  ID = NETLIFY_ID
 
 [Build]
-  Publish = ""
-  Functions = ""
+  Publish = "build"
+  Functions = "bundle exec middleman build"

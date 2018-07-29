@@ -81,6 +81,9 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
+    middleman-dotenv (2.0.0)
+      dotenv (>= 2.0)
+      middleman-core (>= 4.0)
     middleman-inline_svg (0.1.2)
       middleman-core (>= 3.4.1)
       nokogiri (>= 1.8)
@@ -130,6 +133,7 @@ DEPENDENCIES
   middleman (~> 4.2)
   middleman-aria_current (~> 0.1)
   middleman-autoprefixer (~> 2.7)
+  middleman-dotenv (~> 2.0)
   middleman-inline_svg (~> 0.1)
   middleman-livereload (~> 3.4)
   middleman-minify-html (~> 3.4)
