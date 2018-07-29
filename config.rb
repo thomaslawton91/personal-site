@@ -1,3 +1,4 @@
+activate :aria_current
 activate :autoprefixer
 activate :inline_svg
 
