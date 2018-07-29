@@ -3,4 +3,4 @@
 
 [Build]
   Publish = "build"
-  Functions = "bundle exec middleman build"
+  Functions = "middleman build"

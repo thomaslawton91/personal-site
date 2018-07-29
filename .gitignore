@@ -6,3 +6,4 @@ build/
 .env
 .gitignore
 netlify.toml
+netlifyctl-debug.log
