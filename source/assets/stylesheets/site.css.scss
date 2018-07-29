@@ -1,17 +1,12 @@
 $body-background-color: #bdbbe5;
+$navbar-background-color: #d3d1ee;
+$navbar-item-hover-background-color: grey;
+$navbar-item-hover-color: pink;
+$navbar-dropdown-item-hover-color: $navbar-item-hover-color;
+$navbar-dropdown-background-color: $navbar-item-hover-background-color;
+$navbar-dropdown-item-hover-background-color: $navbar-item-hover-background-color;
+
 @import 'bulma.sass';
-
-.navbar{
-  background-color: #d3d1ee;
-}
-
-body {
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-}
 
 a {
   color: rgba(#000, 0.7);

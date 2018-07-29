@@ -1,19 +1,36 @@
-nav.navbar
+nav.navbar.has-text-weight-bold
   .navbar-brand
-    a.navbar-item Brand
+    = link_to :index, :class => :'navbar-item'
+      img src='../assets/images/anchor.png'
     a.navbar-burger.burger data-target='navMenu'
       span
       span
       span
   .navbar-menu#navMenu
     .navbar-start
-      a.navbar-item Holder
+      = link_to 'Home', :index, :class => :'navbar-item'
+      = link_to 'About', :about, :class => :'navbar-item'
       .navbar-item.has-dropdown.is-hoverable
-        a.navbar-link Holder
+        = link_to 'Projects', :projects, :class => :'navbar-link'
         .navbar-dropdown
           a.navbar-item Holder
           a.navbar-item Holder
           a.navbar-item Holder
-      a.navbar-item Holder
     .navbar-end
-      a.navbar-item Icons
+      .navbar-item
+        .field.is-grouped
+          p.control
+            a.button.is-dark href='https://github.com/thomaslawton91'
+              span.icon
+                i.fab.fa-github
+              span Github
+          p.control
+            a.button.is-dark href='https://twitter.com/tanukianchor'
+              span.icon
+                i.fab.fa-twitter
+              span Twitter
+          p.control
+            a.button.is-dark href='https://linkedin.com/in/thomas-lawton'
+              span.icon
+                i.fab.fa-linkedin
+              span LinkedIn
