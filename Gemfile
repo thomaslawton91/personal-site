@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.4.3'
 
-
 gem 'middleman', '~> 4.2'
 gem 'middleman-aria_current', '~> 0.1'
 gem 'middleman-inline_svg', '~> 0.1'

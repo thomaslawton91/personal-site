@@ -12,7 +12,7 @@ page "/*.json", layout: false
 page "/*.txt", layout: false
 page "/*.xml", layout: false
 
-page "source/*", :layout => :content_layout
+page "source/*", :layout => :layout
 
 configure :development do
   activate :livereload do |reload|

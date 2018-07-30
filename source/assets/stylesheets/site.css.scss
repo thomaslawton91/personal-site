@@ -1,19 +1,17 @@
-body {
-  background-color: #A48EB2;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+$body-background-color: #bdbbe5;
+$navbar-background-color: #d3d1ee;
+$navbar-item-hover-background-color: #dcdaf1;
+$navbar-item-hover-color: black;
+$navbar-burger-color: pink;
+$navbar-dropdown-item-hover-color: $navbar-item-hover-color;
+$navbar-dropdown-background-color: $navbar-item-hover-background-color;
+$navbar-dropdown-item-hover-background-color: $navbar-item-hover-background-color;
+
+@import 'bulma.sass';
+
+a{
+    color: black;
 }
-
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+#index-hero{
+  text-align: center;
 }
