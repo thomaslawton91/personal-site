@@ -1,18 +1,17 @@
 $body-background-color: #bdbbe5;
 $navbar-background-color: #d3d1ee;
-$navbar-item-hover-background-color: grey;
-$navbar-item-hover-color: pink;
+$navbar-item-hover-background-color: #dcdaf1;
+$navbar-item-hover-color: black;
+$navbar-burger-color: pink;
 $navbar-dropdown-item-hover-color: $navbar-item-hover-color;
 $navbar-dropdown-background-color: $navbar-item-hover-background-color;
 $navbar-dropdown-item-hover-background-color: $navbar-item-hover-background-color;
 
 @import 'bulma.sass';
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+a{
+    color: black;
+}
+#index-hero{
+  text-align: center;
 }
