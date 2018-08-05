@@ -21,6 +21,8 @@ activate :google_analytics do |ga|
   ga.tracking_id = 'UA-89572461-1'
 end
 
+activate :directory_indexes
+
 page "source/*", :layout => :layout
 
 configure :development do
