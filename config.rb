@@ -12,17 +12,21 @@ page "/*.json", layout: false
 page "/*.txt", layout: false
 page "/*.xml", layout: false
 
+require 'sprockets/es6'
+activate :sprockets do |s|
+  s.supported_output_extensions << '.es6'
+end
+
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-89572461-1'
+end
+
 page "source/*", :layout => :layout
 
 configure :development do
   activate :livereload do |reload|
     reload.no_swf = true
   end
-end
-
-require 'sprockets/es6'
-activate :sprockets do |s|
-  s.supported_output_extensions << '.es6'
 end
 
 configure :production do
