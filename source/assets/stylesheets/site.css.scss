@@ -12,6 +12,16 @@ $navbar-dropdown-item-hover-background-color: $navbar-item-hover-background-colo
 a{
     color: black;
 }
-#index-hero{
-  text-align: center;
+
+#watermark-container{
+  z-index: 1;
+}
+
+#watermark{
+  padding-top: 10px;
+  padding-left: 20px;
+  position: fixed;
+  opacity: 0.1;
+  z-index: 0;
+  color: white;
 }
