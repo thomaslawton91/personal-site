@@ -1,7 +1,5 @@
-activate :aria_current
 activate :autoprefixer
-activate :dotenv
-activate :inline_svg
+activate :directory_indexes
 
 set :css_dir, "assets/stylesheets"
 set :fonts_dir, "assets/fonts"
@@ -21,10 +19,6 @@ activate :google_analytics do |ga|
   ga.tracking_id = 'UA-89572461-1'
 end
 
-activate :directory_indexes
-
-page "source/*", :layout => :layout
-
 configure :development do
   activate :livereload do |reload|
     reload.no_swf = true
@@ -39,21 +33,23 @@ configure :production do
   activate :minify_javascript
 end
 
+Time.zone = 'UTC'
+
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
-  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+    blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
-  # blog.sources = "{year}-{month}-{day}-{title}.html"
+    blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
     blog.layout = "blog"
   # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
+    blog.summary_length = 250
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
-  # blog.default_extension = ".markdown"
+    blog.default_extension = ".md"
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
@@ -63,5 +59,16 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.page_link = "page/{num}"
 end
+
+set :markdown,
+  autolink: true,
+  fenced_code_blocks: true,
+  footnotes: true,
+  highlight: true,
+  smartypants: true,
+  strikethrough: true,
+  tables: true,
+  with_toc_data: true
+set :markdown_engine, :redcarpet
 
 page "/feed.xml", layout: false
