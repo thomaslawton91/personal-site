@@ -1,6 +1,6 @@
-nav.navbar.has-text-weight-bold
+nav.navbar.has-text-weight-bold.has-text-centered
   .navbar-brand
-    = link_to :index, :class => :'navbar-item'
+    = link_to :index, class: 'navbar-item'
       img src='/assets/images/anchor.png'
     a.navbar-burger.burger data-target='navMenu'
       span
@@ -8,29 +8,5 @@ nav.navbar.has-text-weight-bold
       span
   .navbar-menu#navMenu
     .navbar-start
-      = link_to 'Home', :index, :class => :'navbar-item'
-      = link_to 'About', :about, :class => :'navbar-item'
-      .navbar-item.has-dropdown.is-hoverable
-        = link_to 'Projects', :projects, :class => :'navbar-link'
-        .navbar-dropdown
-          a.navbar-item Holder
-          a.navbar-item Holder
-          a.navbar-item Holder
-    .navbar-end
-      .navbar-item
-        .field.is-grouped
-          p.control
-            a.button.is-inverted href='https://github.com/thomaslawton91'
-              span.icon
-                i.fab.fa-github
-              span Github
-          p.control
-            a.button.is-inverted href='https://twitter.com/tanukianchor'
-              span.icon
-                i.fab.fa-twitter
-              span Twitter
-          p.control
-            a.button href='https://dev.to/sofubi'
-              span.icon
-                img src='https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
-              span Dev.to
+      = link_to 'About', :index, :class => :'navbar-item'
+      = link_to 'Logs', :posts, :class => :'navbar-item'

@@ -1,22 +1,30 @@
 ---
+layout: blog
+title: Logs
 pageable: true
-per_page: 10
+per_page: 3
 ---
-.section
-  .hero
-    .hero-body
-      .content
-        h1.title Daily Log and Thoughts
-        .contaier
-          - if paginate && num_pages > 1
-            p Page == page_number of == num_pages
+.section.is-paddingless
+  .content
+    h1.title Daily Log and Thoughts
+    .container
 
-          - if prev_page
-              p = link_to 'Previous page', prev_page
+      - if prev_page
+        p.pagination-previous = link_to 'Previous page', prev_page
 
-          - page_articles.each_with_index do |article, i|
-            h2 = link_to article.title, article
+      .section
+        - page_articles.each_with_index do |article, i|
+          h4 = link_to article.title, article
+          p = article.summary
+          h6 = article.date.strftime('%b %e %Y')
+          div.tags
+            - article.tags.each do |tag|
+              span.tag: a href='#{tag_path(tag)}' = tag
 
-          - if paginate
-            - if next_page
-              p = link_to 'Next page', next_page
+      - if paginate
+        - if next_page
+          p.pagination-next = link_to 'Next page', next_page
+
+      - if paginate && num_pages > 1
+        .has-text-centered
+          h3 = page_number
