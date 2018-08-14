@@ -1,17 +1,12 @@
 ---
-layout: blog
-title: Logs
 pageable: true
-per_page: 3
+per_page: 2
 ---
+
 .section
   .content
-    h1.title Daily Log and Thoughts
+    h1.title Articles tagged #{tagname}
     .container
-
-      - if prev_page
-        p.pagination-previous = link_to 'Previous page', prev_page
-
       .section
         - page_articles.each_with_index do |article, i|
           h4 = link_to article.title, article
@@ -24,6 +19,9 @@ per_page: 3
       - if paginate
         - if next_page
           p.pagination-next = link_to 'Next page', next_page
+
+      - if prev_page
+        p.pagination-previous.is-pulled-right = link_to 'Previous page', prev_page
 
       - if paginate && num_pages > 1
         .has-text-centered
