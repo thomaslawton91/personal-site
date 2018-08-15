@@ -1,16 +1,37 @@
-$body-background-color: #bdbbe5;
-$navbar-background-color: #d3d1ee;
+$body-background-color: #654CA9;
+$navbar-background-color: #8067C4;
 $navbar-item-hover-background-color: #dcdaf1;
 $navbar-item-hover-color: black;
 $navbar-burger-color: pink;
 $navbar-dropdown-item-hover-color: $navbar-item-hover-color;
 $navbar-dropdown-background-color: $navbar-item-hover-background-color;
 $navbar-dropdown-item-hover-background-color: $navbar-item-hover-background-color;
-
+$button-background-color: #654CA9;
+$button-color: black;
+$button-border-width: 0px;
+$link-hover: white;
 @import 'bulma.sass';
 
+#landing-icons {
+  color: #d8dee9;
+}
+body {
+  color: #d8dee9;
+}
+
+.subtitle {
+  color: #d8dee9;
+}
+
+.title {
+  color: #c0c5ce;
+}
+
 a{
-    color: black;
+    color: #d8dee9;
+    &:hover{
+      font-weight: bold;
+    }
 }
 
 #landing-picture{
