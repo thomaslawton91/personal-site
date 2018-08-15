@@ -13,7 +13,7 @@ layout: layout
       .section
         .container
           .buttons.has-addons.is-centered
-            p.control 
+            p.control
               a.button href='https://github.com/thomaslawton91'
                 span.icon
                   i.fab.fa-github
@@ -26,29 +26,29 @@ layout: layout
                 span.icon
                   img src='https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
             p.control
-              a.button href='/feed.xml'
+              a.button href='/feed.xml' target='_blank'
                 span.icon
                   i.fas.fa-rss
             p.control
               a.button href='mailto:thomaslawton91@gmail.com'
                 span.icon
                   i.fas.fa-envelope
-                  
+
 .section
   .columns
     .column.is-full
       .container
         .title Who am I?
         .subtitle Ruby Developer, Husband, Cat Dad
-        
-.section 
+
+.section
   .columns
     .column.is-full
       .container
         .title What am I up to?
         a.subtitle href='https://github.com/thomaslawton91/personal-site' Currently polishing this up
         br
-        a.subtitle href='https://twitter.com/tanukianchor' Learning how to Twitter 
+        a.subtitle href='https://twitter.com/tanukianchor' Learning how to Twitter
         br
         a.subtitle href='https://dev.to/sofubi' Connecting with the community
         br
@@ -61,7 +61,7 @@ layout: layout
         a.subtitle href='https://github.com/thomaslawton91/ramen-scrape' Ramen Scrape
         p Ramen Scrape was a foray into Python web scraping that scraped an entire Blogger site for its full contents.
         br
-        a.subtitle href='https://github.com/thomaslawton91/ramen_adventures' Ramen Adventures 
+        a.subtitle href='https://github.com/thomaslawton91/ramen_adventures' Ramen Adventures
         p Ramen Adventures, related to Ramen Scrape, was a site built on RoR to port a Blogger site for a successful ramen reviewer
         br
         a.subtitle href='https://github.com/thomaslawton91/dev.to' My fork of Dev.to
@@ -70,9 +70,9 @@ layout: layout
 .section
   .columns
     .column.is-full
-      .content
-        h1 Logs
-        ol
-          - blog.articles[0...5].each do |article|
-            li = link_to article.title, article, class: 'subtitle'
-
+      .container
+        .title Logs
+        .content
+        - blog.articles[0...5].each do |article|
+          = link_to article.title, article, class: 'subtitle'
+          br

@@ -1,6 +1,8 @@
 ---
+layout: blog
+title: tags
 pageable: true
-per_page: 2
+per_page: 5
 ---
 
 .section
@@ -10,7 +12,6 @@ per_page: 2
       .section
         - page_articles.each_with_index do |article, i|
           h4 = link_to article.title, article
-          p = article.summary
           h6 = article.date.strftime('%b %e %Y')
           div.tags
             - article.tags.each do |tag|
