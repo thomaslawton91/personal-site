@@ -6,19 +6,20 @@ per_page: 5
 ---
 .section
   .content
-    h1.title Daily Log and Thoughts
+    .title Daily Log and Thoughts
     .container
 
       - if prev_page
-        p.pagination-previous = link_to 'Previous page', prev_page
+        .pagination-previous = link_to 'Previous page', prev_page
 
       .section
         - page_articles.each_with_index do |article, i|
-          h4 = link_to article.title, article
-          h6 = article.date.strftime('%b %e %Y')
-          div.tags
-            - article.tags.each do |tag|
-              span.tag: a href='#{tag_path(tag)}' = tag
+          .box
+            h4 = link_to article.title, article
+            .dates = article.date.strftime('%b %e %Y')
+            div.tags
+              - article.tags.each do |tag|
+                span.tag.is-dark: a href='#{tag_path(tag)}' = tag
 
       - if paginate
         - if next_page
