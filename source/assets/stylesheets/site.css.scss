@@ -10,7 +10,11 @@ $button-background-color: #654CA9;
 $button-color: black;
 $button-border-width: 0px;
 $link-hover: white;
-@import 'bulma.sass';
+@import 'fontawesome/fontawesome.scss';
+@import 'fontawesome/solid.scss';
+@import 'fontawesome/brands.scss';
+@import 'animated.scss';
+@import 'bulma/bulma.sass';
 
 #landing-icons {
   color: #d8dee9;
