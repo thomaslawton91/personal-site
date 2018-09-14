@@ -1,28 +1,78 @@
 ---
-title: Thomas Lawton
+title: thomas
+layout: layout
 ---
+.section
+  .hero.is-small
+    .hero-body.has-text-centered
+      .container
+        h1.title.animated.bounceInDown Hey! I'm Thomas
+        h2.subtitle.animated.bounceInDown developer and linux enthusiast
+        .image.is-128x128.is-flex#landing-picture
+          img.is-rounded src='assets/images/me.jpg'
+      .section
+        .container.animated.bounceInUp
+          .buttons.has-addons.is-centered
+            p.control
+              a.button href='https://github.com/thomaslawton91'
+                span.icon#landing-icons
+                  i.fab.fa-github
+            p.control
+              a.button  href='https://twitter.com/tanukianchor'
+                span.icon#landing-icons
+                  i.fab.fa-twitter
+            p.control
+              a.button href='https://dev.to/sofubi'
+                span.icon#landing-icons
+                  img src='/assets/images/dev-badge.svg'
+            p.control
+              a.button href='/feed.xml' target='_blank'
+                span.icon#landing-icons
+                  i.fas.fa-rss
+            p.control
+              a.button href='mailto:thomaslawton91@gmail.com'
+                span.icon#landing-icons
+                  i.fas.fa-envelope
 
-img.image.is-square#watermark src='/assets/images/catdad.png'
-.columns.is-multiline.has-text-centered#watermark-container
-  .column.is-full
-    .hero
-      .hero-body
-        h1.title Hi, I'm Thomas Lawton
-        h3.subtitle I can be found doing one of several things
-  .column.is-half
-    h3.subtitle Building something new
-  .column.is-half
-    h3.subtitle Learning something new
-  .column.is-half
-    h3.subtitle Catching up on podcasts
-  .column.is-half
-    h3.subtitle Hunting down new CLIs
-  .column.is-half
-    h3.subtitle Singing to my cats
-  .column.is-half
-    h3.subtitle Playing videogames
-  .column.is-full.subtitle
-    ul
-      li I'm a computer repair technician by day and web developer by night.
-      li When I want to blow off some steam RasPis are my go-to.
-      li I love Linux and the command line.
+.section
+  .columns
+    .column.is-full
+      .container
+        .title Who am I?
+        .subtitle Ruby Developer, Husband, Cat Dad
+
+.section
+  .columns
+    .column.is-full
+      .container
+        .title What am I up to?
+        a.subtitle href='https://github.com/thomaslawton91/personal-site' Currently polishing this up
+        br
+        a.subtitle href='https://twitter.com/tanukianchor' Learning how to Twitter
+        br
+        a.subtitle href='https://dev.to/sofubi' Connecting with the community
+        br
+        a.subtitle href='https://www.meetup.com/members/147703172/' Attending Meetups
+.section
+  .columns
+    .column.is-full
+      .container
+        .title What do I brag about?
+        a.subtitle href='https://github.com/thomaslawton91/ramen-scrape' Ramen Scrape
+        p Ramen Scrape was a foray into Python web scraping that scraped an entire Blogger site for its full contents.
+        br
+        a.subtitle href='https://github.com/thomaslawton91/ramen_adventures' Ramen Adventures
+        p Ramen Adventures, related to Ramen Scrape, was a site built on RoR to port a Blogger site for a successful ramen reviewer
+        br
+        a.subtitle href='https://github.com/thomaslawton91/dev.to' My fork of Dev.to
+        p My fork of Dev.to's open source codebase - my first open source contributions
+
+.section
+  .columns
+    .column.is-full
+      .container
+        .title Logs
+        .content
+        - blog.articles[0...5].each do |article|
+          = link_to article.title, article, class: 'subtitle'
+          br

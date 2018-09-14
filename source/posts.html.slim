@@ -1,0 +1,30 @@
+---
+layout: blog
+title: logs
+pageable: true
+per_page: 5
+---
+.section
+  .content
+    .title Daily Log and Thoughts
+    .container
+
+      - if prev_page
+        .pagination-previous = link_to 'Previous page', prev_page
+
+      .section
+        - page_articles.each_with_index do |article, i|
+          .box
+            h4 = link_to article.title, article
+            .dates = article.date.strftime('%b %e %Y')
+            div.tags
+              - article.tags.each do |tag|
+                span.tag.is-dark: a href='#{tag_path(tag)}' = tag
+
+      - if paginate
+        - if next_page
+          p.pagination-next = link_to 'Next page', next_page
+
+      - if paginate && num_pages > 1
+        .has-text-centered
+          h3 = page_number
