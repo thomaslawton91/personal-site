@@ -4,7 +4,7 @@ ruby '2.4.3'
 
 gem "builder", "~> 3.0"
 gem 'font-awesome-sass', '~> 5.2.0'
-gem 'sassc'
+gem 'sassc', '~> 1.5.1'
 gem 'middleman', '~> 4.2'
 gem 'middleman-google-analytics', '~> 3.0'
 gem 'middleman-sprockets', '~> 4.0.0.rc'
